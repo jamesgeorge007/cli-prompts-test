@@ -8,6 +8,14 @@
 $ npm install --save-dev cli-prompts-test
 ```
 
+## API
+
+### runTest(args, answers, options?)
+
+- `args`: CLI args to pass in.
+- `answers`: answers to be passed to `stdout` (simulate user input).
+- `options`: Optionally specify the `testPath` (defaults to `process.cwd()`) and `timeout` (defaults to `500ms`) between keystrokes.
+
 ## Usage
 
 ```js
@@ -65,3 +73,5 @@ describe("cli-prompts-test", () => {
   });
 });
 ```
+
+Find an example [here](https://github.com/madlabsinc/mevn-cli/blob/develop/jest/helpers.js).
