@@ -3,7 +3,8 @@ const execa = require("execa");
 
 module.exports = (args, answers, options) => {
   // Defaults to process.cwd()
-  const runnerOptions = options && options.testPath ? { cwd: options.testPath } : {};
+  const runnerOptions =
+    options && options.testPath ? { cwd: options.testPath } : {};
 
   // Timeout between each keystroke simulation
   const timeout = options && options.timeout ? options.timeout : 500;
