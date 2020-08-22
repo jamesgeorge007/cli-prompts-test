@@ -1,5 +1,5 @@
-const concat = require('concat-stream');
-const execa = require('execa');
+const concat = require("concat-stream");
+const execa = require("execa");
 
 const runPromptWithAnswers = (args, answers, options) => {
   // Defaults to process.cwd()
@@ -8,8 +8,8 @@ const runPromptWithAnswers = (args, answers, options) => {
   // Timeout between each keystroke simulation
   const timeout = options && options.timeout ? options.timeout : 500;
 
-  const runner = execa('node', args, runnerOptions);
-  runner.stdin.setDefaultEncoding('utf-8');
+  const runner = execa("node", args, runnerOptions);
+  runner.stdin.setDefaultEncoding("utf-8");
 
   const writeToStdin = (answers) => {
     if (answers.length > 0) {
@@ -43,7 +43,7 @@ const runPromptWithAnswers = (args, answers, options) => {
         stdoutCompleted = true;
         obj.stdout = result.toString();
         resolveWithObj();
-      }),
+      })
     );
 
     runner.stderr.pipe(
@@ -51,7 +51,7 @@ const runPromptWithAnswers = (args, answers, options) => {
         stderrCompleted = true;
         obj.stderr = result.toString();
         resolveWithObj();
-      }),
+      })
     );
   });
 };

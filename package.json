@@ -4,6 +4,8 @@
   "description": "Write e2e tests for CLI apps with ease",
   "main": "index.js",
   "scripts": {
+    "format:check": "prettier --check index.js",
+    "format": "prettier --write index.js",
     "test": "jest"
   },
   "keywords": [],
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "enquirer": "^2.3.6",
-    "jest": "^26.4.1"
+    "jest": "^26.4.1",
+    "prettier": "^2.0.5"
   }
 }
