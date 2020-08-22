@@ -1,6 +1,14 @@
 const concat = require("concat-stream");
 const execa = require("execa");
 
+/**
+ * @param {string[]} args CLI args to pass in
+ * @param {string[]} answers answers to be passed to stdout
+ * @param {Object} [options] specify the testPath and timeout
+ *
+ * returns {Promise<Object>}
+ */
+
 module.exports = (args, answers, options) => {
   // Defaults to process.cwd()
   const runnerOptions =
