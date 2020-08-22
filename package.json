@@ -6,6 +6,7 @@
   "scripts": {
     "format:check": "prettier --check index.js test",
     "format": "prettier --write index.js test",
+    "pretest": "npm run format:check",
     "test": "jest"
   },
   "files": [
@@ -25,7 +26,7 @@
     "prompts"
   ],
   "author": "James George",
-  "license": "GPL",
+  "license": "GPL-3.0",
   "dependencies": {
     "concat-stream": "^2.0.0",
     "execa": "^4.0.3"

@@ -1,7 +1,7 @@
 const concat = require("concat-stream");
 const execa = require("execa");
 
-const runPromptWithAnswers = (args, answers, options) => {
+module.exports = (args, answers, options) => {
   // Defaults to process.cwd()
   const runnerOptions = options && options.testPath ? { cwd: testPath } : {};
 
@@ -55,5 +55,3 @@ const runPromptWithAnswers = (args, answers, options) => {
     );
   });
 };
-
-module.exports = runPromptWithAnswers;
