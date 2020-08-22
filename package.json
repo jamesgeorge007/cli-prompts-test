@@ -4,8 +4,8 @@
   "description": "Write e2e tests for CLI apps with ease",
   "main": "index.js",
   "scripts": {
-    "format:check": "prettier --check index.js",
-    "format": "prettier --write index.js",
+    "format:check": "prettier --check index.js test",
+    "format": "prettier --write index.js test",
     "test": "jest"
   },
   "keywords": [],
