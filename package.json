@@ -8,9 +8,24 @@
     "format": "prettier --write index.js test",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesgeorge007/cli-prompts-test.git"
+  },
+  "keywords": [
+    "inquirer",
+    "enquirer",
+    "test",
+    "child_process",
+    "execa",
+    "cli",
+    "prompts"
+  ],
+  "author": "James George",
+  "license": "GPL",
   "dependencies": {
     "concat-stream": "^2.0.0",
     "execa": "^4.0.3"
