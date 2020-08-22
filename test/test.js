@@ -6,9 +6,9 @@ const DOWN = "\x1B\x5B\x42";
 const ENTER = "\x0D";
 const SPACE = "\x20";
 
-describe("cli-prompts-test", () => {
-  const cliPath = `${__dirname}/fixtures/cli.js`;
+const cliPath = `${__dirname}/fixtures/cli.js`;
 
+describe("cli-prompts-test", () => {
   it("picks a single option", async () => {
     const { stdout } = await runTest(
       [cliPath],
