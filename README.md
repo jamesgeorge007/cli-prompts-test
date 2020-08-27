@@ -40,10 +40,7 @@ enquirer
 ```js
 // test.js
 
-const runTest = require("cli-prompts-test");
-
-const DOWN = "\x1B\x5B\x42";
-const ENTER = "\x0D";
+const runTest, { DOWN, ENTER } = require("cli-prompts-test");
 
 const cliPath = `${__dirname}/cli.js`;
 
