@@ -48,7 +48,7 @@ const ENTER = "\x0D";
 const cliPath = `${__dirname}/cli.js`;
 
 describe("cli-prompts-test", () => {
-  it("chooses first option", async () => {
+  it("picks first option", async () => {
     const { stdout } = await runTest(
       [cliPath],
       [ENTER]
@@ -56,7 +56,7 @@ describe("cli-prompts-test", () => {
     expect(stdout).toContain("You chose First option");
   });
 
-  it("chooses second option", async () => {
+  it("picks second option", async () => {
     const { stdout } = await runTest(
       [cliPath],
       [`${DOWN}${ENTER}`]
@@ -64,7 +64,7 @@ describe("cli-prompts-test", () => {
     expect(stdout).toContain("You chose Second option");
   });
 
-  it("chooses third option", async () => {
+  it("picks third option", async () => {
     const { stdout } = await runTest(
       [cliPath],
       [`${DOWN}${DOWN}${ENTER}`]
