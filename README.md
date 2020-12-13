@@ -46,26 +46,35 @@ const cliPath = `${__dirname}/cli.js`;
 
 describe("cli-prompts-test", () => {
   it("picks first option", async () => {
-    const { stdout } = await runTest(
+    const { exitCode, stdout } = await runTest(
       [cliPath],
       [ENTER]
     );
+
+    // Assertions
+    expect(exitCode).toBe(0);
     expect(stdout).toContain("You chose First option");
   });
 
   it("picks second option", async () => {
-    const { stdout } = await runTest(
+    const { exitCode, stdout } = await runTest(
       [cliPath],
       [`${DOWN}${ENTER}`]
     );
+
+    // Assertions
+    expect(exitCode).toBe(0);
     expect(stdout).toContain("You chose Second option");
   });
 
   it("picks third option", async () => {
-    const { stdout } = await runTest(
+    const { exitCode, stdout } = await runTest(
       [cliPath],
       [`${DOWN}${DOWN}${ENTER}`]
     );
+
+    // Assertions
+    expect(exitCode).toBe(0);
     expect(stdout).toContain("You chose Third option");
   });
 });
