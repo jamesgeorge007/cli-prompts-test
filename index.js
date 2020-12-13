@@ -37,31 +37,22 @@ module.exports = (args, answers, options) => {
   return new Promise((resolve) => {
     const obj = {};
 
-    // Booleans to keep track of completion status
-    let stdoutCompleted = false;
-    let stderrCompleted = false;
-
-    const resolveWithObj = () => {
-      if (stdoutCompleted && stderrCompleted) {
-        resolve(obj);
-      }
-    };
-
     runner.stdout.pipe(
       concat((result) => {
-        stdoutCompleted = true;
         obj.stdout = result.toString();
-        resolveWithObj();
       })
     );
 
     runner.stderr.pipe(
       concat((result) => {
-        stderrCompleted = true;
         obj.stderr = result.toString();
-        resolveWithObj();
       })
     );
+
+    runner.on("exit", (exitCode) => {
+      obj.exitCode = exitCode;
+      resolve(obj);
+    });
   });
 };
 
