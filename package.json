@@ -1,6 +1,6 @@
 {
   "name": "cli-prompts-test",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Write e2e tests for CLI apps with ease",
   "main": "index.js",
   "scripts": {
