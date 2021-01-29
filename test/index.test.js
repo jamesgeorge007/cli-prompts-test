@@ -1,12 +1,8 @@
 "use strict";
 
-const path = require("path");
+import path from "path";
 
-const runTest = require("../");
-
-const DOWN = "\x1B\x5B\x42";
-const ENTER = "\x0D";
-const SPACE = "\x20";
+import runTest, { DOWN, ENTER, SPACE } from "..";
 
 const fixturesPath = path.join(__dirname, "fixtures");
 const cliPath = path.join(fixturesPath, "cli.js");

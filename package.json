@@ -4,8 +4,8 @@
   "description": "Write e2e tests for CLI apps with ease",
   "main": "index.js",
   "scripts": {
-    "format:check": "prettier --check index.js test",
-    "format": "prettier --write index.js test",
+    "format:check": "prettier --check *.{md,js} test",
+    "format": "prettier --write *.{md,js} test",
     "pretest": "npm run format:check",
     "test": "jest"
   },
@@ -32,6 +32,9 @@
     "execa": "^4.0.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-jest": "^26.6.3",
     "enquirer": "^2.3.6",
     "jest": "^26.4.1",
     "prettier": "^2.0.5"
