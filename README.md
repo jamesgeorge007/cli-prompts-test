@@ -23,7 +23,7 @@ $ npm install --save-dev cli-prompts-test
 
 const enquirer = require("enquirer");
 
-const choices = ['First option', 'Second option', 'Third option'];
+const choices = ["First option", "Second option", "Third option"];
 
 enquirer
   .prompt({
@@ -40,16 +40,13 @@ enquirer
 ```js
 // test.js
 
-const runTest, { DOWN, ENTER } = require("cli-prompts-test");
+import runTest, { DOWN, ENTER } from "cli-prompts-test";
 
 const cliPath = `${__dirname}/cli.js`;
 
 describe("cli-prompts-test", () => {
   it("picks first option", async () => {
-    const { exitCode, stdout } = await runTest(
-      [cliPath],
-      [ENTER]
-    );
+    const { exitCode, stdout } = await runTest([cliPath], [ENTER]);
 
     // Assertions
     expect(exitCode).toBe(0);
@@ -57,10 +54,7 @@ describe("cli-prompts-test", () => {
   });
 
   it("picks second option", async () => {
-    const { exitCode, stdout } = await runTest(
-      [cliPath],
-      [`${DOWN}${ENTER}`]
-    );
+    const { exitCode, stdout } = await runTest([cliPath], [`${DOWN}${ENTER}`]);
 
     // Assertions
     expect(exitCode).toBe(0);
